@@ -1,3 +1,79 @@
-<script>
-location.replace("https://discord.gg/robloxtrollers");
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloxy Cleaner</title>
+    <link rel="icon" type="image/x-icon" href="https://bloxycleaner.xyz/icon.ico">
+    <link rel="icon" type="image/png" href="https://bloxycleaner.xyz/assets/icon.png">
+    
+    <meta content="Bloxy Cleaner" property="og:title" />
+    <meta content="Bloxy Cleaner provides a continuously updated database of users who are actively involved in Roblox Condo communities." property="og:description"/>
+    <meta content="https://bloxycleaner.xyz/icon.png" property="og:image"/>
+    <meta content="https://bloxycleaner.xyz" property="og:url"/>
+    <meta name="theme-color" content="#FFFFFF">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://bloxycleaner.xyz/styles/mainpg.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://bloxycleaner.xyz/assets/icon.png" alt="Bloxy Cleaner">
+                Bloxy Cleaner
+            </div>
+            <nav>
+                <a href="https://bloxycleaner.xyz/l/disc">Appeal Ban</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="home" class="page active">
+            <div class="hero">
+                <h1 class="fade-in">Bloxy Cleaner</h1>
+                <p class="fade-in fade-delay-1">Keep your Discord server safe from predatory users. Automatically detect and remove members involved in Roblox condo communities.</p>
+                <div class="button-group fade-in fade-delay-2">
+                    <a href="https://bloxycleaner.xyz/l/bot-oauth" class="btn btn-primary">Add to Server</a>
+                    <a href="https://bloxycleaner.xyz/l/disc" class="btn btn-secondary">Join Support Server</a>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-card fade-in fade-delay-1">
+                    <div class="stat-number">300k+</div>
+                    <div class="stat-label">Users Cached</div>
+                </div>
+                <div class="stat-card fade-in fade-delay-2">
+                    <div class="stat-number">62</div>
+                    <div class="stat-label">Servers</div>
+                </div>
+                <div class="stat-card fade-in fade-delay-3">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>How It Works</h2>
+                <p>Bloxy Cleaner is a Discord Bot that provides lists of users that are in, or related to, Roblox Condo communities. A condo community is a server where people go to find Roblox related NSFW games and or media.</p>
+                <p>Bloxy Cleaner provides a continuously updated database of users who are actively involved in said Condo communities. We have been collecting and verifying this data through multiple private sources to ensure accuracy. There is no false detections. Every user in the database has been confirmed to be apart of these communities, even if they have never sent a message. </p>
+                <p>When someone joins your discord server, the bot will instantly check if they are in a condo server. If they are, they will be banned so they cannot cause harm to your server.</p>
+                <p>This project is heavily inspired by Ruben Sim's famous Ro-Cleaner.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Bloxy Cleaner • Created by BurntRibs24 • Launched July 16, 2025</p>
+        <p>Based on ro-cleaner by Ruben Sim</p>
+    </footer>
+    <script>
+        function showPage(pageName) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageName).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
