@@ -24,7 +24,7 @@
                 Bloxy Cleaner
             </div>
             <nav>
-                <a href="https://api.bloxycleaner.xyz/dashboard">Dashboard</a>
+                <a href="#" id="dashboardBtn">Dashboard</a>
             </nav>
         </div>
     </header>
@@ -67,5 +67,33 @@
         <p>Bloxy Cleaner • Created by BurntRibs24 • Launched July 16, 2025</p>
         <p>Based on Ruben Sim's Ro-Cleaner</p>
     </footer>
+    <script>
+let authPopup = null;
+
+document.getElementById("dashboardBtn").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    if (authPopup && !authPopup.closed) {
+        return;
+    }
+
+    authPopup = window.open(
+        "https://discord.com/oauth2/authorize?client_id=1395067476722712759&response_type=code&redirect_uri=https%3A%2F%2Fapi.bloxycleaner.xyz%2Fcallback&scope=identify",
+        "bloxyLogin",
+        "width=500,height=700"
+    );
+
+    if (!authPopup) {
+        alert("Popup blocked. Please allow popups to log in.");
+        return;
+    }
+});
+
+window.addEventListener("message", function (event) {
+    if (event.data === "bloxy-auth-success") {
+        window.location.href = "https://api.bloxycleaner.xyz/dashboard";
+    }
+});
+</script>
 </body>
 </html>
